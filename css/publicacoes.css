@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*-------------------------------------------------------------------------------------------------*/
+
+body {
+    background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.3)), url(../img/img-norman/teste.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+/*Navbar bio*/
+
+#nav-navbiotainer {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+#nav-itens a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'EB Garamond', serif;
+}
+
+#nav-itens a:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgb(160, 111, 55);
+    transition: .9s;
+}
+
+#navbio {
+    width: 100%;
+    background-image: url(../img/decoracao/Untitled-1.jpg);
+    background-size: cover;
+    color: #eee;
+    height: 16vh;
+    position: fixed;
+}
+
+#logo {
+    width: 220px;
+    margin-left: 7%;
+}
+
+#nav-itens {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+#nav-itens li {
+    padding: 10px;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+/*menu mobile*/
+
+.hamburguer-icone {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+.hamburguer-icone div {
+    width: 35px;
+    height: 3px;
+    background-color: #a3360f;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu {
+    border-top: 1px solid #111;
+    display: none;
+    position: absolute;
+    top: 135px;
+    line-height: 30px;
+    left: 0;
+    width: 100%;
+    background-color: #a3360f;
+}
+
+.mobile-menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.mobile-menu li {
+    list-style: none;
+}
+
+
+/*-------------------------------------------------------------------------------------------------*/
+
+.container-publi {
+    padding: 7px;
+    background-color: #fcfcccef;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 150px;
+}
+
+.container-publia {
+    padding: 7px;
+    background-color: #fcfcccef;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 150px;
+    height: 100vh;
+}
+
+.container-publi h2 {
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 3%;
+    color: #a3360f;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container-publia h2 {
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 3%;
+    color: #a3360f;
+    text-align: center;
+    font-weight: bold;
+}
+
+.artigos {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.artigos h3 {
+    font-family: 'EB Garamond', serif;
+    color: #a3360f;
+    text-align: start;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.artigos a {
+    text-decoration: none;
+    color: rgb(119, 109, 109);
+    font-weight: bold;
+    font-family: 'EB Garamond', serif;
+    font-size: 15px;
+    margin-top: 10px;
+    margin: 10px;
+}
+
+.artigos a:hover {
+    color: #a3360f;
+}
+
+.artigos p {
+    color: #111;
+    font-family: 'EB Garamond', serif;
+    text-align: start;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.principais {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+#footer {
+    color: rgb(0, 0, 0);
+    padding: 30px;
+    background-color: #a3360f;
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+}
+
+
+/*Fim Footer*/
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+@media (max-width: 3000px) {
+    #logo {
+        width: 150px;
+    }
+}
+
+@media (max-width: 900px) {
+    #logo {
+        width: 60px;
+    }
+}
+
+@media (max-width: 810px) {
+    #nav-itens {
+        display: none;
+    }
+    #navbio {
+        display: flex;
+    }
+    .hamburguer-icone {
+        display: block;
+    }
+    #logo {
+        width: 100px;
+        display: none;
+    }
+    .container-publi {
+        margin: 0;
+        width: 100%;
+    }
+    .container-publia {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+
+/*--Código @MarcoAurelio--*/

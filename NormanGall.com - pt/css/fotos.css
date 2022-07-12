@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+/*Navbar bio*/
+
+#nav-navbiotainer {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+#nav-itens a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'EB Garamond', serif;
+}
+
+#nav-itens a:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgb(160, 111, 55);
+    transition: .9s;
+}
+
+#navbio {
+    width: 100%;
+    background-image: url(../img/decoracao/Untitled-1.jpg);
+    background-size: cover;
+    color: #eee;
+    height: 16vh;
+}
+
+#logo {
+    width: 200px;
+    margin-left: 100px;
+}
+
+#nav-itens {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+#nav-itens li {
+    padding: 10px;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+body {
+    background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.3)), url(../img/decoracao/DT829.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/*-------------------------------------------------------------------------------------------------*/
+
+.mains {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 0;
+    background-color: #fcfcccd7;
+    padding-bottom: 250px;
+}
+
+
+/*Menu de seleção*/
+
+h2 {
+    margin: 16px;
+    color: rgb(0, 0, 0);
+    font-family: 'EB Garamond', serif;
+    padding-top: 5%;
+    text-align: center;
+}
+
+.container {
+    margin-top: 100px;
+    padding: 32px;
+}
+
+.select-box {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 20%;
+}
+
+.select-box .options-container {
+    background: #000000;
+    color: #ff6600;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+}
+
+.selected {
+    background: #ff6600;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #000000;
+    position: relative;
+    font-family: 'EB Garamond', serif;
+    order: 0;
+}
+
+.selected::after {
+    content: "";
+    height: 100%;
+    width: 32px;
+    right: 10px;
+    top: 5px;
+    transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.select-box .options-container.active+.selected::after {
+    transform: rotateX(180deg);
+    top: -6px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: #0d141f;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+    background: #525861;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.select-box .option:hover {
+    background: #414b57;
+}
+
+.select-box label {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.select-box label a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'EB Garamond', serif;
+}
+
+.select-box .option .radio {
+    display: none;
+}
+
+
+/*-------------------------------------------------------------------------------------------------*/
+
+
+/*Vitrine*/
+
+.slider {
+    position: relative;
+    width: 100%;
+    min-height: 560px;
+    overflow: hidden;
+}
+
+.slider .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+.slider .slide.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+}
+
+.slider .slide img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .slide .inf {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    background-color: rgba(163, 54, 15, 0.596);
+    width: 70%;
+    margin-top: 350px;
+    margin-left: 100px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgb(1, 1, 1/5%);
+}
+
+.slider .slide .inf h2 {
+    font-family: 'EB Garamond', serif;
+    color: #eee;
+    text-align: start;
+}
+
+.slider .slide .inf p {
+    font-family: 'EB Garamond', serif;
+    color: #eee;
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+
+.navegacao {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.slider:hover .navegacao {
+    opacity: 1;
+}
+
+.prev-btn,
+.next-btn {
+    z-index: 999;
+    font-size: 3em;
+    color: #ff6600;
+    background: rgba(17, 17, 17, 0.568);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev-btn {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.next-btn {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.navecacao-visivel {
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+}
+
+.navecacao-visivel .slide-icon {
+    z-index: 999;
+    background: #ff660085;
+    width: 20px;
+    height: 10px;
+    transform: translateY(50px);
+    margin: 0 6px;
+    border-radius: 2px;
+}
+
+.navecacao-visivel .slide-icon.active {
+    background-color: #a3360f;
+}
+
+
+/*-------------------------------------------------------------------------------------------------*/
+
+
+/*Rodape*/
+
+#footer {
+    color: rgb(0, 0, 0);
+    padding: 30px;
+    background-color: #a3360f;
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+}
+
+
+/*-------------------------------------------------------------------------------------------------*/
+
+
+/*menu mobile*/
+
+.hamburguer-icone {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+.hamburguer-icone div {
+    width: 35px;
+    height: 3px;
+    background-color: #a3360f;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu {
+    border-top: 1px solid #111;
+    display: none;
+    position: absolute;
+    top: 135px;
+    line-height: 30px;
+    left: 0;
+    width: 100%;
+    background-color: #a3360f;
+}
+
+.mobile-menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.mobile-menu li {
+    list-style: none;
+}
+
+
+/*-------------------------------------------------------------------------------------------------*/
+
+
+/*Responsive*/
+
+@media (max-width: 3000px) {
+    #logo {
+        width: 150px;
+    }
+}
+
+@media (max-width: 900px) {
+    #logo {
+        width: 60px;
+    }
+}
+
+
+/*Navbar responve*/
+
+@media(max-width: 810px) {
+    .select-box {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 200px;
+    }
+    #nav-itens {
+        display: none;
+    }
+    #navbio {
+        display: flex;
+    }
+    .hamburguer-icone {
+        display: block;
+    }
+    #logo {
+        width: 100px;
+        display: none;
+    }
+    .slider {
+        display: none;
+    }
+    .mains {
+        margin: 0;
+        margin-top: -100px;
+        height: 100vh;
+    }
+    body {
+        background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.3)), url(../img/decoracao/DT829.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+
+/*--Código @MarcoAurelio--*/

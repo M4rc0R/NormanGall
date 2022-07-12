@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.3)), url(../img/img-norman/teste.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+/*Navbar bio*/
+
+#nav-navbiotainer {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+#nav-itens a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'EB Garamond', serif;
+}
+
+#nav-itens a:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgb(160, 111, 55);
+    transition: .9s;
+}
+
+#navbio {
+    width: 100%;
+    background-image: url(../img/decoracao/Untitled-1.jpg);
+    background-size: cover;
+    color: #eee;
+    height: 16vh;
+    position: fixed;
+}
+
+#logo {
+    width: 200px;
+    margin-left: 100px;
+}
+
+#nav-itens {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+#nav-itens li {
+    padding: 10px;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+.conteudo {
+    align-items: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #fcfcccd7;
+    padding-top: 150px;
+}
+
+.conteudo h2 {
+    font-family: 'EB Garamond', serif;
+    padding: 20px;
+    color: #a3360f;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.conteudo h3 {
+    font-family: 'EB Garamond', serif;
+    padding: 20px;
+    color: #a3360f;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.conteudo .conteudo-imagem img {
+    width: 100%;
+}
+
+.conteudo .conteudo-texto p {
+    line-height: 30px;
+    text-align: start;
+    padding: 20px;
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    font-size: 19px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+#footer {
+    color: rgb(0, 0, 0);
+    padding: 30px;
+    background-color: #a3360f;
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+}
+
+
+/*Fim Footer*/
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+/*menu mobile*/
+
+.hamburguer-icone {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+.hamburguer-icone div {
+    width: 35px;
+    height: 3px;
+    background-color: #a3360f;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu {
+    border-top: 1px solid #111;
+    display: none;
+    position: absolute;
+    top: 135px;
+    line-height: 30px;
+    left: 0;
+    width: 100%;
+    background-color: #a3360f;
+}
+
+.mobile-menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.mobile-menu li {
+    list-style: none;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+@media(max-width: 3000px) {
+    .conteudo {
+        padding-top: 160px;
+    }
+    #logo {
+        width: 150px;
+    }
+}
+
+@media (max-width: 900px) {
+    #logo {
+        width: 60px;
+    }
+}
+
+@media (max-width: 810px) {
+    .conteudo {
+        width: 100%;
+        margin-left: 0;
+    }
+    .conteudo-imagem img {
+        margin-left: 0;
+        width: 100%;
+    }
+    .conteudo-texto {
+        width: 100%;
+        margin: 0;
+    }
+    .conteudo .conteudo-texto p {
+        width: 100%;
+        padding: 0;
+        margin-left: 0;
+    }
+    .conteudo h2 {
+        margin-left: 0;
+        padding: 0;
+    }
+    .conteudo h3 {
+        margin-left: 0;
+        padding: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 19px;
+    }
+    #nav-itens {
+        display: none;
+    }
+    #navbio {
+        display: flex;
+    }
+    .hamburguer-icone {
+        display: block;
+    }
+    #logo {
+        display: none;
+    }
+}

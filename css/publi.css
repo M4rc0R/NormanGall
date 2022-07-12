@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url(../img/img-norman/P1240032.JPG);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+/*Navbar bio*/
+
+#nav-navbiotainer {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+#nav-itens a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'EB Garamond', serif;
+}
+
+#nav-itens a:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgb(160, 111, 55);
+    transition: .9s;
+}
+
+#navbio {
+    width: 100%;
+    background-image: url(../img/decoracao/Untitled-1.jpg);
+    background-size: cover;
+    color: #eee;
+    height: 16vh;
+    position: fixed;
+}
+
+#logo {
+    width: 200px;
+    margin-left: 100px;
+}
+
+#nav-itens {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+#nav-itens li {
+    padding: 10px;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+.conteudo-publicacao {
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 150px;
+    padding-bottom: 60px;
+    background-color: #fcfcccd7;
+}
+
+.grid-publicacoes1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.grid1 img {
+    width: 125px;
+    margin-bottom: 10px;
+}
+
+.grid1 a {
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #a3360f;
+    color: #eee;
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+}
+
+.grid1 {
+    text-align: center;
+}
+
+.grid1 a:hover {
+    text-decoration: none;
+    padding: 6px;
+    background-color: #eee;
+    color: #a3360f;
+    border-radius: 6px;
+    transition: .6s;
+    font-family: 'EB Garamond', serif;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    color: #a3360f;
+    font-weight: bold;
+}
+
+.principais-publicacoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #a3360f18;
+}
+
+.principais-publicacoes img {
+    width: 300px;
+}
+
+.principais-publicacoes a {
+    color: #a3360f;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+/*menu mobile*/
+
+.hamburguer-icone {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+.hamburguer-icone div {
+    width: 35px;
+    height: 3px;
+    background-color: #a3360f;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu {
+    border-top: 1px solid #111;
+    display: none;
+    position: absolute;
+    top: 135px;
+    line-height: 30px;
+    left: 0;
+    width: 100%;
+    background-color: #a3360f;
+}
+
+.mobile-menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.mobile-menu li {
+    list-style: none;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+#footer {
+    color: rgb(0, 0, 0);
+    padding: 30px;
+    background-color: #a3360f;
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+}
+
+@media (max-width: 1600px) {
+    .conteudo-publicacao {
+        padding-bottom: 20px;
+    }
+    .grid-publicacoes1 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        align-items: center;
+    }
+    .principais-publicacoes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        align-items: center;
+    }
+    #logo {
+        width: 150px;
+    }
+    .principais-publicacoes img {
+        width: 180px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .conteudo-publicacao {
+        margin: 0;
+        width: 100%;
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+    }
+    .grid-publicacoes1 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        align-items: center;
+    }
+    .principais-publicacoes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .conteudo-publicacao {
+        margin: 0;
+        width: 100%;
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+    }
+    .grid-publicacoes1 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        align-items: center;
+    }
+    #logo {
+        width: 130px;
+    }
+    .principais-publicacoes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 810px) {
+    .conteudo-publicacao {
+        margin: 0;
+        width: 100%;
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+    }
+    .grid-publicacoes1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        align-items: center;
+    }
+    .principais-publicacoes {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        align-items: center;
+    }
+    .principais {
+        margin-bottom: 15px;
+    }
+    #nav-itens {
+        display: none;
+    }
+    #navbio {
+        display: flex;
+    }
+    .hamburguer-icone {
+        display: block;
+    }
+    #logo {
+        width: 100px;
+        display: none;
+    }
+}
+
+
+/*--Código @MarcoAurelio--*/

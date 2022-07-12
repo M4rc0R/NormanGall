@@ -1,0 +1,230 @@
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.3)), url(../img/img-norman/teste.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    /*--------------------------------------------------------------------------------------------*/
+    /*Navbar bio*/
+    
+    #nav-navbiotainer {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        align-items: center;
+    }
+    
+    #nav-itens a {
+        text-decoration: none;
+        color: #fff;
+        font-family: 'EB Garamond', serif;
+    }
+    
+    #nav-itens a:hover {
+        cursor: pointer;
+        border-radius: 5px;
+        color: rgb(160, 111, 55);
+        transition: .9s;
+    }
+    
+    #navbio {
+        width: 100%;
+        background-image: url(../img/decoracao/Untitled-1.jpg);
+        background-size: cover;
+        color: #eee;
+        height: 16vh;
+    }
+    
+    #logo {
+        width: 220px;
+        margin-left: 7%;
+    }
+    
+    #nav-itens {
+        display: flex;
+        list-style: none;
+        text-transform: uppercase;
+    }
+    
+    #nav-itens li {
+        padding: 10px;
+    }
+    /*--------------------------------------------------------------------------------------------*/
+    
+    .conteudo-contatos {
+        margin-left: 30%;
+        margin-right: 30%;
+        padding-top: 20px;
+        height: 80vh;
+        background-color: #fcfcccd7;
+    }
+    
+    .conteudo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    h2 {
+        color: #a3360f;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+    
+    .texto {
+        line-height: 40px;
+        margin-right: 10px;
+        padding-bottom: 20px;
+        font-family: 'EB Garamond', serif;
+        font-weight: bold;
+    }
+    
+    .texto p {
+        margin-left: 10px;
+        font-family: 'EB Garamond', serif;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    .texto a {
+        margin-left: 10px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #a3360f;
+        padding: 6px;
+        border-radius: 8px;
+        font-family: 'EB Garamond', serif;
+    }
+    
+    .texto a:hover {
+        background-color: #fff;
+        color: #a3360f;
+        transition: .6s;
+    }
+    
+    .img img {
+        border-radius: 15px;
+        height: 700px;
+    }
+    /*--------------------------------------------------------------------------------------------*/
+    
+    #footer {
+        color: rgb(0, 0, 0);
+        padding: 30px;
+        background-color: #a3360f;
+        text-align: center;
+        font-family: 'EB Garamond', serif;
+    }
+    /*--------------------------------------------------------------------------------------------*/
+    /*menu mobile*/
+    
+    .hamburguer-icone {
+        margin: auto 0;
+        display: none;
+        cursor: pointer;
+    }
+    
+    .hamburguer-icone div {
+        width: 35px;
+        height: 3px;
+        background-color: #a3360f;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    
+    .open .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .mobile-menu {
+        border-top: 1px solid #111;
+        display: none;
+        position: absolute;
+        top: 135px;
+        line-height: 30px;
+        left: 0;
+        width: 100%;
+        background-color: #a3360f;
+    }
+    
+    .mobile-menu li a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .mobile-menu li {
+        list-style: none;
+    }
+    
+    @media(max-width: 1700px) {
+        .img img {
+            width: 250px;
+            height: 400px;
+        }
+        #logo {
+            width: 150px;
+        }
+    }
+    
+    @media(max-width: 1300px) {
+        .img img {
+            width: 200px;
+            height: 300px;
+        }
+        #logo {
+            width: 150px;
+        }
+        .conteudo {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    
+    @media(max-width: 900px) {
+        #logo {
+            width: 60px;
+        }
+    }
+    
+    @media(max-width: 810px) {
+        #nav-itens {
+            display: none;
+        }
+        #navbio {
+            display: flex;
+        }
+        .hamburguer-icone {
+            display: block;
+        }
+        #logo {
+            width: 100px;
+        }
+        #footer {
+            width: 100%;
+        }
+        .conteudo-contatos {
+            width: 100%;
+            margin: 0;
+        }
+        .img {
+            display: none;
+        }
+        .texto {
+            width: 100%;
+        }
+    }
+    /*--Código @MarcoAurelio--*/

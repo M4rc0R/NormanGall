@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+/*Navbar home*/
+
+#nav-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+#nav-itens a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'EB Garamond', serif;
+}
+
+#nav-itens a:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgb(160, 111, 55);
+    transition: .9s;
+}
+
+#logoi {
+    width: 220px;
+}
+
+#navbar {
+    width: 100%;
+    background: #a3360f;
+    color: #eee;
+    height: 16vh;
+}
+
+#logo {
+    font-size: 2rem;
+}
+
+#nav-itens {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+#nav-itens li {
+    padding: 10px;
+}
+
+
+/*Fim Navbar home*/
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+/*Header*/
+
+
+/*Configuração de fundo com imagem*/
+
+#img1 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: url(../img/img-norman/_MG_1301.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+}
+
+
+/*Fim Configuração de fundo com imagem*/
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+/*Textos dentro da imagem*/
+
+#img2 {
+    text-align: start;
+    margin-top: 32%;
+    background-color: rgba(17, 17, 17, 0.397);
+    padding: 10px;
+}
+
+#img2 h2 {
+    margin-bottom: 17px;
+}
+
+#img2 p {
+    margin-bottom: 17px;
+    font-family: 'EB Garamond', serif;
+}
+
+
+/*Textos dentro da imagem*/
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+#footer {
+    color: rgb(0, 0, 0);
+    padding: 30px;
+    background-color: #a3360f;
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+}
+
+#footer p a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+#footer p img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+
+/*menu mobile*/
+
+.hamburguer-icone {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+.hamburguer-icone div {
+    width: 35px;
+    height: 3px;
+    background-color: #a3360f;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu {
+    border-top: 1px solid #111;
+    display: none;
+    position: absolute;
+    top: 135px;
+    line-height: 30px;
+    left: 0;
+    width: 100%;
+    background-color: #a3360f;
+}
+
+.mobile-menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.mobile-menu li {
+    list-style: none;
+}
+
+@media(max-width: 810px) {
+    #nav-itens {
+        display: none;
+    }
+    #navbar {
+        display: flex;
+    }
+    .hamburguer-icone {
+        display: block;
+    }
+    #logoi {
+        width: 150px;
+    }
+    #nav-itens {
+        display: none;
+    }
+    #navbio {
+        display: flex;
+    }
+    .hamburguer-icone {
+        display: block;
+    }
+    #logo {
+        width: 100px;
+    }
+    #img1 {
+        width: 100%;
+    }
+    .btn {
+        margin-left: 5%;
+    }
+    #img2 p,
+    h2 {
+        text-align: left;
+        margin-right: 10px;
+        margin-left: 5px;
+    }
+    .poto {
+        width: 70%;
+    }
+    .biogra {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+    }
+    #itens {
+        width: 100%;
+    }
+    .iten {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    #footer {
+        width: 100%;
+    }
+    .biogra p {
+        padding-top: 6%;
+        padding-bottom: 3%;
+    }
+    .biogra {
+        padding-top: 5%;
+    }
+}
+
+
+/*--Código @MarcoAurelio--*/
